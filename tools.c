@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * open_file - opens a file
- * @file_name: the file namepath
- * Return: void
+ * open_file - this opens a file.
+ * @file_name: this is the file name path.
+ * Returns: a void
  */
 
 void open_file(char *file_name)
@@ -19,9 +19,9 @@ void open_file(char *file_name)
 
 
 /**
- * read_file - reads a file
- * @fd: pointer to file descriptor
- * Return: void
+ * read_file - this reads a file.
+ * @fd: pointer to file descriptor.
+ * Returns: a void.
  */
 
 void read_file(FILE *fd)
@@ -39,13 +39,13 @@ void read_file(FILE *fd)
 
 
 /**
- * parse_line - Separates each line into tokens to determine
- * which function to call
- * @buffer: line from the file
- * @line_number: line number
+ * parse_line - Separates each line into tokens to determine.
+ * which function to call.
+ * @buffer: line from the file.
+ * @line_number: line number.
  * @format:  storage format. If 0 Nodes will be entered as a stack.
  * if 1 nodes will be entered as a queue.
- * Return: Returns 0 if the opcode is stack. 1 if queue.
+ * Returns: 0 if the opcode is stack else 1 if it isqueue.
  */
 
 int parse_line(char *buffer, int line_number, int format)
@@ -71,13 +71,13 @@ int parse_line(char *buffer, int line_number, int format)
 }
 
 /**
- * find_func - find the appropriate function for the opcode
- * @opcode: opcode
- * @value: argument of opcode
+ * find_func - finds the appropriate function for the opcode.
+ * @opcode: opcode.
+ * @value: argument of opcode.
  * @format:  storage format. If 0 Nodes will be entered as a stack.
- * @ln: line number
+ * @ln: line number.
  * if 1 nodes will be entered as a queue.
- * Return: void
+ * Returns: a void
  */
 void find_func(char *opcode, char *value, int ln, int format)
 {
@@ -120,7 +120,7 @@ void find_func(char *opcode, char *value, int ln, int format)
 
 
 /**
- * call_fun - Calls the required function.
+ * call_fun - this calls the required function.
  * @func: Pointer to the function that is about to be called.
  * @op: string representing the opcode.
  * @val: the string representing a numeric value.
